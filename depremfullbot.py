@@ -8,14 +8,16 @@ from email.message import EmailMessage
 
 KANDILLI_URL = "http://www.koeri.boun.edu.tr/scripts/lst0.asp"
 BUYUK_DEPREM_ESIGI = 4.0
-DONGU_SURESI_SN = 600
+DONGU_SURESI_SN = 600  # 10 dakika
 
-TOKEN= "7640976723:AAFpxZFz-k7tYI_d4rru6yBdF00TtZpNlls"
-CHAT_ID = "1343887728"
+# Telegram
+TOKEN= "[YOUR_TELEGRAM_TOKEN]"
+CHAT_ID = "[YOUR_CHAT_ID]"
 
-EMAIL_USER = "deprembot58@gmail.com"
-EMAIL_PASS = "qtxydjvyguzbwffo"
-EMAIL_TO = "zivaslilar@gmail.com"
+# Gmail SMTP
+EMAIL_USER = "[YOUR_EMAIL_ADDRESS]"
+EMAIL_PASS = "[YOUR_EMAIL_APP_PASSWORD]"
+EMAIL_TO = "[RECIPIENT_EMAIL]"
 
 SEEN_FILE = "seen_ids.json"
 
@@ -125,6 +127,5 @@ while True:
     except Exception as e:
         print("Hata:", e)
 
-    dakika = int(DONGU_SURESI_SN/60)
-    print(f"⏳ {dakika} dakika sonra tekrar güncellenecek...")
+    print(f"⏳ {int(DONGU_SURESI_SN/60)} dakika sonra tekrar güncellenecek...")
     time.sleep(DONGU_SURESI_SN)
