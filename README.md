@@ -1,4 +1,4 @@
-# earthquake
+# Earthquake
 Türkiye'de meydana gelen depremleri telegram ve e-mail üzerinden bildirir. / This software announces the earthquakes that happens in Turkey via Telegram and e-mail
 
 # Deprem Uyarı Botu  
@@ -83,3 +83,55 @@ Bot arka planda sürekli çalışarak yeni depremleri kontrol eder ve bildirim g
 ## Not  
 
 Bu proje sadece bilgilendirme amaçlıdır. Resmî bir uyarı sistemi yerine geçmez. Deprem güvenliği için her zaman AFAD ve Kandilli’nin resmî duyurularını takip ediniz.  
+
+
+Earthquake Alert Bot
+This project monitors earthquake data published by the Kandilli Observatory and sends notifications via Telegram or email for earthquakes of a certain magnitude.
+
+The goal is to automatically notify users of earthquakes measuring 4.0 and above.
+
+Features
+Pulls real-time data from the Kandilli Observatory
+Different alert messages for earthquakes of 4.0–5.0, 5.0–6.0, 6.0–7.0, and 7.0+ magnitude
+Sends notifications via a Telegram bot
+Optional email notification support
+All data is saved to the earthquakes.txt file
+Requirements
+To run the project, you need to install the following:
+
+pip install requests pandas
+If you also want to use the email feature:
+
+pip install secure-smtplib
+Python 3.10 and above is recommended.
+
+Telegram Bot Setup
+Create a new bot by chatting with @BotFather on Telegram.
+Get the bot token provided to you.
+To find out your own user ID, write to the @userinfobot bot.
+Replace the token and chat_id parts in the code with your own information.
+The following resource may be useful for a detailed explanation:
+👉 How to Create a Telegram Bot?
+
+Email Notification Setup (Optional)
+To send emails, you need to enable IMAP access in your Gmail settings and create an App Password.
+
+Your 2-step verification must be active.
+Go to “App Passwords” in your Google account and get a new password.
+Replace the EMAIL_ADDRESS and APP_PASSWORD sections in the code with your own information.
+For more details, this article may be helpful:
+👉 Sending Mail from Python with Gmail
+
+Usage
+After downloading the project, you can run it from the terminal:
+
+python depremfullbot.py
+The bot runs continuously in the background, checks for new earthquakes, and sends notifications.
+
+Contributions
+Those who wish can improve the code and open a pull request. Better error handling, logging, or notifications for different platforms (e.g., Discord, Slack) can be added.
+
+Note
+This project is for informational purposes only. It does not replace an official warning system. For earthquake safety, always follow the official announcements from AFAD and Kandilli.
+
+Translated with DeepL.com (free version)
