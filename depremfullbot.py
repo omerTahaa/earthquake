@@ -8,13 +8,13 @@ from email.message import EmailMessage
 
 KANDILLI_URL = "http://www.koeri.boun.edu.tr/scripts/lst0.asp"
 BUYUK_DEPREM_ESIGI = 4.0
-DONGU_SURESI_SN = 600  # 10 dakika
+DONGU_SURESI_SN = 600
 
-# Telegram
+# Telegram bot
 TOKEN= "[YOUR_TELEGRAM_TOKEN]"
 CHAT_ID = "[YOUR_CHAT_ID]"
 
-# Gmail SMTP
+# Gmail bot
 EMAIL_USER = "[YOUR_EMAIL_ADDRESS]"
 EMAIL_PASS = "[YOUR_EMAIL_APP_PASSWORD]"
 EMAIL_TO = "[RECIPIENT_EMAIL]"
@@ -129,3 +129,4 @@ while True:
 
     print(f"⏳ {int(DONGU_SURESI_SN/60)} dakika sonra tekrar güncellenecek...")
     time.sleep(DONGU_SURESI_SN)
+
